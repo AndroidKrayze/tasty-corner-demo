@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --corner-red: #c23b2e;
+  --enamel-cream: #f7f0e4;
+  --tea-green: #5f7a5a;
+  --morning-wash: #f3e2c8;
+  --ink: #1a1614;
+  --lacquer: #8b1a1a;
+  --cream-deep: #ebe0d0;
+  --mist: rgba(247, 240, 228, 0.92);
+  --background: var(--enamel-cream);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-corner-red: var(--corner-red);
+  --color-enamel-cream: var(--enamel-cream);
+  --color-tea-green: var(--tea-green);
+  --color-morning-wash: var(--morning-wash);
+  --color-ink: var(--ink);
+  --color-lacquer: var(--lacquer);
+  --color-cream-deep: var(--cream-deep);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-figtree);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--enamel-cream);
+  color: var(--ink);
+  font-family: var(--font-figtree), system-ui, sans-serif;
+  background-image:
+    radial-gradient(
+      ellipse 120% 80% at 10% -10%,
+      rgba(243, 226, 200, 0.9),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 90% 60% at 100% 20%,
+      rgba(95, 122, 90, 0.08),
+      transparent 50%
+    ),
+    linear-gradient(180deg, #f7f0e4 0%, #f3e8d8 48%, #f7f0e4 100%);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(194, 59, 46, 0.22);
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
+}
+
+.section-pad {
+  padding-inline: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.lacquer-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--lacquer) 20%,
+    var(--corner-red) 50%,
+    var(--lacquer) 80%,
+    transparent
+  );
+  opacity: 0.45;
+}
