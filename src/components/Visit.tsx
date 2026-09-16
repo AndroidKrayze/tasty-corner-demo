@@ -3,14 +3,14 @@
 import Image from "next/image";
 import { siteConfig } from "@/site.config";
 import { withBase } from "@/lib/paths";
-import { FadeIn } from "./FadeIn";
+import { Reveal } from "@/components/Reveal";
 
 export function Visit() {
   return (
     <section id="visit" className="bg-[var(--morning-wash)]/40" aria-label="Visit">
       <div className="grid lg:grid-cols-2">
         <div className="section-pad flex flex-col justify-center py-14 md:py-20">
-          <FadeIn>
+          <Reveal>
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--tea-green)]">
               Visit
             </p>
@@ -61,7 +61,7 @@ export function Visit() {
             >
               Open in Google Maps
             </a>
-          </FadeIn>
+          </Reveal>
         </div>
         <div className="relative min-h-[300px] lg:min-h-full">
           <Image

@@ -1,7 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { SiteHeader } from "@/components/SiteHeader";
 import { TrustBar } from "@/components/TrustBar";
-import { MenuRail } from "@/components/MenuRail";
+import { Menu } from "@/components/Menu";
 import { SpecialtyBand } from "@/components/SpecialtyBand";
 import { Reviews } from "@/components/Reviews";
 import { Visit } from "@/components/Visit";
@@ -16,7 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
-        <MenuRail />
+        <Menu />
         <SpecialtyBand />
         <Reviews />
         <Visit />

@@ -22,3 +22,14 @@ Real venue photographs only. This file is for attribution/provenance and is **no
 ## Usage rule
 
 Hero shopfront (`hero-chiltern-corner.jpg`) appears only in the hero. Later sections use interior, food, and street-context images only.
+
+## Added for premium menu upgrade (2026-09-16)
+
+| File | Source | Notes |
+|------|--------|--------|
+| `breakfast-chalk.jpg` | Crop of Sluurpy / exterior chalk (`menu-ocr/tasty-corner-08-breakfast-chalk-crop.jpg`) | Authenticity strip — All Day English Breakfast from 6.90. Not a shopfront hero. |
+| `chinese-specials-board.jpg` | Crop of outdoor A-board (`menu-ocr/tasty-corner-07-aboard-crop.jpg`) | Authenticity strip — BBQ pork / dumplings / won tom / vermicelli tiles. |
+| `takeaway-chalkboard.jpg` | Yelp chalkboard (`menu-ocr/tasty-corner-04-yelp-chalkboard.jpg`) | Authenticity strip — interior MENU TAKE AWAY board. |
+| `plate-vermicelli.jpg` | Sluurpy plate (`menu-ocr/tasty-corner-sluurpy-3.jpg`) | Specialty band food plate — not shopfront. |
+| `plate-english.jpg` | Sluurpy plate (`menu-ocr/tasty-corner-sluurpy-4.jpg`) | Reserved authenticity / gallery. |
+| `special-vermicelli-tile.jpg` | A-board cell crop (`menu-ocr/tc-cell-vermicelli.jpg`) | Optional tile crop. |

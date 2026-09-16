@@ -1,7 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/site.config";
-import { FadeIn } from "./FadeIn";
+import { Reveal } from "@/components/Reveal";
 
 export function CallBand() {
   return (
@@ -18,13 +18,13 @@ export function CallBand() {
         aria-hidden
       />
       <div className="section-pad relative py-16 text-center md:py-20">
-        <FadeIn>
+        <Reveal>
           <h2 className="font-display text-3xl md:text-5xl">
             Ready for a Chiltern corner morning?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-[var(--enamel-cream)]/90 md:text-lg">
             Phone ahead or walk in — seating is first-come, and the kettle
-            doesn’t wait.
+            doesn’t wait. Specials boards change; soft-confirm hours before you set out.
           </p>
           <a
             href={siteConfig.phone.href}
@@ -32,7 +32,7 @@ export function CallBand() {
           >
             Call {siteConfig.phone.display}
           </a>
-        </FadeIn>
+        </Reveal>
       </div>
     </section>
   );
