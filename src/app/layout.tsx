@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Figtree } from "next/font/google";
 import { siteConfig } from "@/site.config";
+import { menuCategories, type MenuItem } from "@/menu";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -25,6 +26,17 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+/** Only the plain "£x.xx" prices map cleanly onto schema.org Offer. */
+function offersFor(item: MenuItem) {
+  return [item.priceSmall, item.priceLarge, item.price]
+    .filter((price): price is string => /^£\d+\.\d{2}$/.test(price ?? ""))
+    .map((price) => ({
+      "@type": "Offer",
+      price: price.slice(1),
+      priceCurrency: "GBP",
+    }));
+}
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -54,18 +66,32 @@ const jsonLd = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "06:30",
       closes: "16:30",
     },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "07:00",
+      closes: "16:30",
+    },
   ],
+  hasMenu: {
+    "@type": "Menu",
+    name: `${siteConfig.name} menu`,
+    hasMenuSection: menuCategories.map((category) => ({
+      "@type": "MenuSection",
+      name: category.title,
+      hasMenuItem: category.groups.flatMap((group) =>
+        group.items.map((item) => ({
+          "@type": "MenuItem",
+          name: item.note ? `${item.name} (${item.note})` : item.name,
+          offers: offersFor(item),
+        })),
+      ),
+    })),
+  },
 };
 
 export default function RootLayout({

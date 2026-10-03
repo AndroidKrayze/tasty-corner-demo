@@ -119,6 +119,86 @@ body {
     border-color 0.35s ease;
 }
 
+/* ---- Menu board ---- */
+
+.menu-slab {
+  background-color: #141110;
+  background-image:
+    radial-gradient(
+      ellipse 85% 55% at 6% -10%,
+      rgba(194, 59, 46, 0.3),
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 65% 45% at 100% 2%,
+      rgba(95, 122, 90, 0.22),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 80% 55% at 55% 108%,
+      rgba(139, 26, 26, 0.26),
+      transparent 62%
+    ),
+    linear-gradient(180deg, #1a1614 0%, #110e0d 52%, #1a1614 100%);
+}
+
+.menu-nav {
+  background: rgba(17, 14, 13, 0.94);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 24px -18px rgba(0, 0, 0, 0.9);
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-panel {
+  background: linear-gradient(
+    180deg,
+    rgba(247, 240, 228, 0.075),
+    rgba(247, 240, 228, 0.025)
+  );
+  border: 1px solid rgba(247, 240, 228, 0.12);
+  box-shadow: 0 22px 44px -32px rgba(0, 0, 0, 0.95);
+}
+
+/* Dotted leader: an empty flex item whose synthesised baseline is its bottom
+   edge, so the dots land exactly on the text baseline. */
+.menu-leader {
+  flex: 1 1 auto;
+  min-width: 0.5rem;
+  align-self: baseline;
+  border-bottom: 1px dotted rgba(247, 240, 228, 0.3);
+}
+
+.menu-price {
+  flex-shrink: 0;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--morning-wash);
+}
+
+.set-card {
+  border: 1px solid rgba(139, 26, 26, 0.2);
+  box-shadow: 0 20px 44px -24px rgba(0, 0, 0, 0.8);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.set-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 54px -26px rgba(0, 0, 0, 0.85);
+}
+
 .menu-card:hover {
   transform: translateY(-3px);
   border-color: color-mix(in srgb, var(--corner-red) 40%, transparent);
@@ -129,7 +209,9 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .menu-card,
-  .menu-card:hover {
+  .menu-card:hover,
+  .set-card,
+  .set-card:hover {
     transition: none;
     transform: none;
   }

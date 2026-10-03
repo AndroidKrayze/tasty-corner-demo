@@ -29,7 +29,7 @@ export function SpecialtyBand() {
               Chinese-family hospitality on an English corner
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-[var(--enamel-cream)]/88 md:text-lg">
-              Come for the bacon bap; stay for BBQ pork rice, won tom soup and a
+              Come for the bacon bap; stay for BBQ pork rice, won ton soup and a
               chat with the owners. Streetside tables when the Marylebone light
               is kind — counter service when you’re on the move.
             </p>
@@ -38,19 +38,19 @@ export function SpecialtyBand() {
                 <span className="text-[var(--morning-wash)]" aria-hidden>
                   —
                 </span>
-                Outdoor Chinese A-board with photo-true prices
+                Set breakfasts with tea, coffee and toast from £9.50
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--morning-wash)]" aria-hidden>
                   —
                 </span>
-                All-day English breakfast from the sidewalk chalk
+                Pressed melts, cold sandwiches and loaded jacket potatoes
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--morning-wash)]" aria-hidden>
                   —
                 </span>
-                Sandwiches, melts and jackets from the takeaway board
+                Vermicelli, udon, curry rice and won ton from the wok
               </li>
             </ul>
           </Reveal>

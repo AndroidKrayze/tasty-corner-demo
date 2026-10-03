@@ -33,6 +33,8 @@ export function Visit() {
                 <dd>
                   {siteConfig.hours.weekdays}
                   <br />
+                  {siteConfig.hours.saturday}
+                  <br />
                   {siteConfig.hours.sunday}
                 </dd>
               </div>
