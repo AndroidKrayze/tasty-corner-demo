@@ -53,9 +53,9 @@ export function Hero() {
             {siteConfig.tagline}
           </h1>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-[var(--enamel-cream)]/90 sm:text-lg">
-            Chiltern corner mornings. All-day English breakfast, sandwiches &amp;
-            melts, jacket potatoes, Chinese specials — proper tea and Lavazza
-            coffee.
+            Chiltern corner mornings. Set breakfasts from 6:30am, pressed melts
+            and sandwiches, loaded jacket potatoes, wok-cooked Chinese plates —
+            proper tea and coffee.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a

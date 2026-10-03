@@ -10,7 +10,7 @@ const items = [
   },
   {
     title: "East meets West",
-    copy: "English breakfast board beside Chinese A-board specials — walk in, say hello.",
+    copy: "Set breakfasts and melts beside wok-cooked Chinese plates — walk in, say hello.",
   },
   {
     title: "Phone & walk-in",

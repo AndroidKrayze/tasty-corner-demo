@@ -24,7 +24,8 @@ export function CallBand() {
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-[var(--enamel-cream)]/90 md:text-lg">
             Phone ahead or walk in — seating is first-come, and the kettle
-            doesn’t wait. Specials boards change; soft-confirm hours before you set out.
+            doesn’t wait. Open {siteConfig.hours.weekdays} and{" "}
+            {siteConfig.hours.saturday}.
           </p>
           <a
             href={siteConfig.phone.href}
